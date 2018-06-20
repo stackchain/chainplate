@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [ 
+      "env", 
+      {
+        "modules": false
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    "external-helpers"
+  ],
+  "ignore": [
+    "**/*.test.js"
+  ]
+}
