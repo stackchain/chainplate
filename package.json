@@ -8,7 +8,8 @@
     "report-coverage": "coveralls < ./coverage/lcov.info",
     "cover": "npm test -- --coverage",
     "build": "rollup -c .rolluprc.js",
-    "prebuild": "cross-env BABEL_ENV=lib-dir babel src --out-dir lib"
+    "prebuild": "cross-env BABEL_ENV=lib-dir babel src --out-dir lib",
+    "lint": "eslint ./src"
   },
   "homepage": "https://chainplate.github.io/chainplate",
   "repository": {
@@ -19,7 +20,9 @@
     "LICENSE",
     "README.md",
     "CHANGELOG.md",
-    "lib"
+    "lib",
+    "dist",
+    "src"
   ],
   "keywords": [
     "react",
@@ -45,6 +48,8 @@
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "bootstrap": "^4.1.1",
+    "classnames": "^2.2.6",
     "coveralls": "^3.0.1",
     "cross-env": "^5.2.0",
     "enzyme": "^3.3.0",
@@ -52,6 +57,7 @@
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.9.1",
     "jest": "^23.1.0",
+    "postcss-modules": "^1.1.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-popper": "^1.0.0",
@@ -63,6 +69,7 @@
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-commonjs": "^9.1.3",
     "rollup-plugin-eslint": "^4.0.0",
-    "rollup-plugin-node-resolve": "^3.3.0"
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-postcss": "^1.6.2"
   }
 }
