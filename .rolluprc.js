@@ -9,7 +9,7 @@ const production = !process.env.ROLLUP_WATCH;
 
 // Require understands JSON files.
 const packageJson = require('./package.json');
-const peerDependencies = Object.keys(packageJson.peerDependencies);
+const dependencies = Object.keys(packageJson.dependencies);
 
 function config() {
 	return {
@@ -26,10 +26,11 @@ function config() {
 					'prop-types': 'PropTypes',
 					'react-popper': 'ReactPopper',
 					'react-transition-group': 'ReactTransitionGroup',
+					'bootstrap': 'Bootstrap'
 				},
 				sourcemap: true		
 			},
-		external: peerDependencies,
+		external: dependencies,
 		plugins: [
 			resolver({
 				jsnext: true,
@@ -58,7 +59,7 @@ function config() {
 const umdFullConfig = config();
 
 // Validate globals in main UMD config
-const missingGlobals = peerDependencies.filter(dep => !(dep in umdFullConfig.output.globals));
+const missingGlobals = dependencies.filter(dep => !(dep in umdFullConfig.output.globals));
 if (missingGlobals.length) {
   console.error('All peer dependencies need to be mentioned in globals, please update rollup.config.js.');
   console.error('Missing: ' + missingGlobals.join(', '));
