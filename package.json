@@ -9,7 +9,7 @@
     "cover": "npm test -- --coverage",
     "build": "rollup -c .rolluprc.js",
     "dev": "rollup -c .rolluprc.js",
-    "watch": "chokidar 'src/**' -c 'npm run lint && npm run cover && npm run dev'",
+    "watch": "chokidar 'src/**' -c 'npm run prebuild && npm run lint && npm run cover && npm run dev'",
     "prebuild": "cross-env BABEL_ENV=lib-dir babel src --out-dir lib",
     "server": "browser-sync start --files 'dist/*, index.html' --server",
     "lint": "eslint ./src"
@@ -46,7 +46,6 @@
     "browser-sync": "^2.24.6",
     "chokidar": "^2.0.4",
     "chokidar-cli": "^1.2.0",
-    "classnames": "^2.2.6",
     "coveralls": "^3.0.1",
     "cross-env": "^5.2.0",
     "enzyme": "^3.3.0",
@@ -67,11 +66,14 @@
   "dependencies": {
     "bootstrap": "^4.1.1",
     "jquery": "^3.3.1",
+    "preact": "^8.2.9",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-popper": "^1.0.0",
+    "react-redux": "^5.0.7",
     "react-transition-group": "^2.3.1",
-    "reactstrap": "^6.1.0"
+    "reactstrap": "^6.1.0",
+    "classnames": "^2.2.6"
   }
 }

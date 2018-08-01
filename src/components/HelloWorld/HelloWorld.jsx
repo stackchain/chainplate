@@ -6,6 +6,8 @@ import {
   Col,
   Row
 } from "reactstrap";
+import cn from "classnames/bind";
+import styles from "./HelloWorld.css";
 
 const propTypes = {
   name: PropTypes.string,
@@ -17,6 +19,8 @@ const defaultProps = {
   name: "World",
   message: "This is a simple component."
 };
+
+const cx = cn.bind(styles);
 
 class HelloWorld extends Component {
   render() {
@@ -30,6 +34,8 @@ class HelloWorld extends Component {
               <h1 className="display-4">Hello {name}!</h1>
               <p className="lead">
                 {message}
+              </p>
+              <p className={cx(styles["chainplate-helloworld-border"])}>
               </p>
               {children}
             </Col>
