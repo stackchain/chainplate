@@ -27,6 +27,7 @@ function config() {
 				globals: {
 					'react': 'React',
 					'preact': 'PReact',
+					'redux': 'Redux',
 					'react-redux': 'ReactRedux',
 					'react-dom': 'ReactDOM',
 					'reactstrap': 'Reactstrap',
@@ -35,7 +36,8 @@ function config() {
 					'react-transition-group': 'ReactTransitionGroup',
 					'bootstrap': 'Bootstrap',
 					'jquery': 'JQuery',
-					'classnames': 'Classnames'
+					'classnames': 'Classnames',
+					'eventemitter2': 'EventEmitter'
 				},
 				sourcemap: true		
 			},

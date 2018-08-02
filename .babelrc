@@ -6,10 +6,20 @@
         "modules": false
       }
     ],
+    "stage-2",
     "react"
   ],
   "plugins": [
-    "external-helpers"
+    ["external-helpers"],
+    ["add-module-exports"],
+    ["transform-react-jsx", { "pragma": "h" }],
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": true,
+      "regenerator": true,
+      "moduleName": "babel-runtime"
+    }],
+    [ "transform-flow-strip-types" ]
   ],
   "ignore": [
     "**/*.test.js"
