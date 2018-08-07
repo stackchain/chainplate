@@ -76,7 +76,7 @@ function config() {
 			babel({
 				exclude: 'node_modules/**',
 				externalHelpers: true,
-			}),
+			})
 		]
 	}
 };
